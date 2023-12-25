@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ChatController;
 use App\Http\Controllers\Api\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-//Route::put('posts/{id}/update',[PostController::class,'updatePost']);
-Route::resource('Posts',PostController::class);
+Route::post('messages',[ChatController::class,'message']);
+Route::resource('posts',PostController::class);
